@@ -12,6 +12,10 @@ const taskSchema = new Schema(
       enum: ["Completed", "Not Completed"],
       default: "Not Completed",
     },
+    UserID: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   { timestamps: true }
 );

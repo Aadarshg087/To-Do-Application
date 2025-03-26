@@ -9,7 +9,6 @@ export const loginUser = async (req, res) => {
         success: false,
       });
     }
-
     const isUserExist = await User.findOne({ email });
     if (!isUserExist) {
       return res.status(400).json({
@@ -76,5 +75,3 @@ export const registerUser = async (req, res) => {
     });
   }
 };
-
-
